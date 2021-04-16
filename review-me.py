@@ -5,7 +5,9 @@ import requests
 
 def rush_hour_crashes():
     response = requests.get("https://data.cityofnewyork.us/resource/h9gi-nx95.json")
+
     str_response = response.content
+
     json_data = json.loads(str_response)
 
     evening_rush_count = 0
